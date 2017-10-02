@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>API Project2</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Project2</h1>
+  </header>
+  <main id="content">
+    <div>
+      <form id="user_form" method="get" action="/submit.php">
+        <label for="name">Name</label>
+        <input class="form_styling" type="text" name="name" id="name" />
+        <label for="gitname">Gitname</label>
+        <input class="form_styling" type="text" name="gitname" id="gitname" />
+        <input type="submit" name="submit" id="submit" value="Add New One" />
+        <input type="reset" name="reset" id="reset" value="Reset" />
+      </form>
+    </div>
+    <div id="result">
+      
+    </div>
+  </main>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="site.js"></script>
+</html>
