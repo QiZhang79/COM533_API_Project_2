@@ -13,17 +13,24 @@
   </header>
   <main id="content">
     <div>
-      <form id="user_form" method="get" action="/submit.php">
-        <label for="name">Name</label>
-        <input class="form_styling" type="text" name="name" id="name" />
-        <label for="gitname">Gitname</label>
-        <input class="form_styling" type="text" name="gitname" id="gitname" />
-        <input type="submit" name="submit" id="submit" value="Add New One" />
+      <form id="city_form" method="get" action="/submit.php">
+        <label for="city">city</label>
+        <input class="form_styling" type="text" name="city" id="city" />
+        <label for="country">Country</label>
+        <input class="form_styling" type="text" name="country" id="country" />
+        <input type="submit" name="submit" id="submit" value="Check" />
         <input type="reset" name="reset" id="reset" value="Reset" />
       </form>
     </div>
     <div id="result">
-      
+      <div id="company_name"></div>
+      <form id="company_form" method="get" action="/submit.php">
+        <label for="address">Address</label>
+        <input class="form_styling" type="text" name="address" id="address" />
+        <input type="submit" name="submit" id="submit" value="Check" />
+        <input type="reset" name="reset" id="reset" value="Reset" />
+      </form>
+      <div id="bikeresult"></div>
     </div>
   </main>
 </body>
