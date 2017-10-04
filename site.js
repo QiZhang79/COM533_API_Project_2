@@ -39,13 +39,12 @@ $("#city_form").on("submit", function(e) {
       var address_input = $("#address").val();
 
       $.get(new_url, function(newdata) {
-      	var company_json = newdata["network"]["stations"];
-
-      	var address = $("#address").val();
+      	var station_json = newdata["network"]["stations"];
+        
       	for(var j = 0; j < 583; j++){
-      		var address = company_json[j]['extra']['name'];
+      		var address = station_json[j]["name"];
       		if(address == address_input){
-      		  $("#bike_result").append(company_json[j]["empty_slots"]);
+      		  $("#bike_result").append(station_json[j]["empty_slots"]);
       		}
       	}
       });      
