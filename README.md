@@ -7,3 +7,6 @@ authorization.
 1. Understand and execute progressively enhanced, unobtrusive and asynchronous JavaScript
 2. Work with an open API, learning how to hit its endpoints in response to user input
 3. Process JSON-formatted data and present it in valid well-formed semantic HTML, styled with CSS
+
+## Origin Source
+CityBikes API Documentation http://api.citybik.es/v2/#net_resource
