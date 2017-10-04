@@ -1,7 +1,7 @@
 $("#company_form").hide();
 
 $("#city_form").on("submit", function(e) {
-  var url = "http://api.citybik.es/v2/networks/";
+  var url = "https://api.citybik.es/v2/networks/";
 
   $.get(url, function(data) {
     var info_json = data["networks"];
