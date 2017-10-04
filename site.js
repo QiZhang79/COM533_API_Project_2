@@ -34,8 +34,8 @@ $("#city_form").on("submit", function(e) {
     }
 
     $("#company_form").on("submit", function(e) {
-      //var new_url = "http://api.citybik.es/v2/networks/" + $("#company_name");
-      var new_url = "http://api.citybik.es/v2/networks/divvy";
+      //var new_url = "https://api.citybik.es/v2/networks/" + $("#company_name");
+      var new_url = "https://api.citybik.es/v2/networks/divvy";
       var address_input = $("#address").val();
 
       $.get(new_url, function(newdata) {
