@@ -1,0 +1,72 @@
+
+
+/* RESET CSS */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Base */
+body {
+	background-color: #f3f1f1;
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+
+}
+
+/* Header */
+header {
+	background-color: #ffffff;
+	height: 90px;
+
+}
+
+h1 {
+	font-weight: bold;
+	color: #d88f78;
+	text-align: center;
+	padding-top: 13px;
+	margin: auto;
+}
+
+h4 {
+	color: #d88f78;
+	text-align: center;
+	padding-top: 5px;
+	margin: auto;
+}
+/* Content */
+/* Datetime */
+p {
+	text-align: center;
+	margin: auto;
+	padding-top: 15px;
+	color: #bfb2b2;
+	font-size: 13px;
+}
+
+/* Form */
+#user_form #company_form{
+	width: 1088px;
+	display: block;
+	margin: auto;
+}
+
+.form_styling {
+	height: 25px;
+	padding-left: 15px;
+	border: none;
+	border-radius: 8px;
+    margin: 0 10px 0 10px;
+    width: 70px;
+}
+
+#submit, #reset, #find {
+	margin-top: 30px;
+	margin-left: 10px;
+	font-size: 15px;
+	background-color: #d88e78;
+	color: #ffffff;
+	padding: 5px;
+	box-shadow: 0 8px 16px 0 rgba(166,166,166,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
