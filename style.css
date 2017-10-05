@@ -2,93 +2,107 @@
 
 /* RESET CSS */
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Base */
 body {
-	background-color: #f3f1f1;
-    font-family: 'Slabo 27px', serif;
-    font-size: 18px;
+  background-color: #f3f1f1;
+  font-family: 'Slabo 27px', serif;
+  font-size: 18px;
 
 }
 
 /* Header */
 header {
-	background-color: #ffffff;
-	height: 90px;
-
+  background-color: #ffffff;
+  height: 90px;
 }
 
 h1 {
-	font-weight: bold;
-	color: #d88f78;
-	text-align: center;
-	padding-top: 13px;
-	margin: auto;
+  font-weight: bold;
+  color: #d88f78;
+  text-align: center;
+  padding-top: 13px;
+  margin: auto;
 }
 
 h4 {
-	color: #d88f78;
-	text-align: center;
-	padding-top: 5px;
-	margin: auto;
+  color: #d88f78;
+  text-align: center;
+  padding-top: 5px;
+  margin: auto;
+}
+
+li {
+  list-style-type: none;
 }
 /* Content */
 /* Datetime */
 p {
-	text-align: center;
-	margin: auto;
-	padding-top: 15px;
-	color: #bfb2b2;
-	font-size: 13px;
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
+  color: #bfb2b2;
+  font-size: 13px;
 }
 
 /*Total Form Styling*/
 .form_styling {
-	height: 25px;
-	padding-left: 15px;
-	border: none;
-	border-radius: 8px;
-    margin: 0 10px 0 10px;
-    width: 130px;
+  height: 25px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 10px 0 10px;
+  width: 130px;
 }
 
 #submit, #reset, #find {
-	margin-top: 30px;
-	margin-left: 10px;
-	font-size: 15px;
-	background-color: #d88e78;
-	color: #ffffff;
-	padding: 5px;
-	box-shadow: 0 8px 16px 0 rgba(166,166,166,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 15px;
+  background-color: #d88e78;
+  color: #ffffff;
+  padding: 5px;
+  box-shadow: 0 8px 16px 0 rgba(166,166,166,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* City Form */
 #city_form{
-	width: 440px;
-	display: block;
-	margin: auto;
-	margin-bottom: 40px;
+  width: 568px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 /*Result*/
 #result {
-	width: 500px;
-	display: block;
-	margin: auto;
-	text-align: center;
+  width: 500px;
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 /* Company Name */
 #company_name{
-	width: 200px;
-	display: block;
-	margin: auto;
+  width: 200px;
+  display: block;
+  margin: auto;
+  font-size: 25px;
 }
 
 #result_company{
-	color: blue;
+  color: blue;
+}
+
+/* Company Form */
+#company_form{
+  margin-bottom: 20px;	
+}
+
+/* Bike Result */
+li {
+  font-size: 25px;
 }
 
