@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +14,13 @@
   <main id="content">
     <div>
       <form id="city_form" method="get" action="/submit.php">
-        <label for="city">city</label>
+        <label for="city">City</label>
         <input class="form_styling" type="text" name="city" id="city" />
         <label for="country">Country</label>
         <input class="form_styling" type="text" name="country" id="country" />
         <input type="submit" name="submit" id="submit" value="Check" />
         <input type="reset" name="reset" id="reset" value="Reset" />
+        <p> "Country" input right now only supports country ISO code, like "US", "FR"(France) and "GB"(Great Britain) </p>
       </form>
     </div>
     <div id="result">
