@@ -45,20 +45,14 @@ p {
 	font-size: 13px;
 }
 
-/* Form */
-#user_form #company_form{
-	width: 1088px;
-	display: block;
-	margin: auto;
-}
-
+/*Total Form Styling*/
 .form_styling {
 	height: 25px;
 	padding-left: 15px;
 	border: none;
 	border-radius: 8px;
     margin: 0 10px 0 10px;
-    width: 70px;
+    width: 130px;
 }
 
 #submit, #reset, #find {
@@ -70,3 +64,31 @@ p {
 	padding: 5px;
 	box-shadow: 0 8px 16px 0 rgba(166,166,166,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+/* City Form */
+#city_form{
+	width: 440px;
+	display: block;
+	margin: auto;
+	margin-bottom: 40px;
+}
+
+/*Result*/
+#result {
+	width: 500px;
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+/* Company Name */
+#company_name{
+	width: 200px;
+	display: block;
+	margin: auto;
+}
+
+#result_company{
+	color: blue;
+}
+
