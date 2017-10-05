@@ -22,29 +22,36 @@ $("#city_form").on("submit", function(e) {
 	  var country = info_json[i]["location"]["country"];
 	  var city_li = city_alias(info_json[i]["location"]["city"]);
 
-	  if(country == country_in && city_li.indexOf(city_in) != -1) {
-		  $("#company_name").append(info_json[i]["id"]);
-		  $("#company_form").show();
-		  output = true;
+  	  if(country == country_in && city_li.indexOf(city_in) != -1) {
+  		  $("#company_name").append("Yes! Here we have " +'<b id = "result_company">' + info_json[i]["id"] + '</b>');
+  		  $("#company_form").show();
+  		  output = true;
 
-	  } 
+  	  } 
     }
+
     if(output == false){
 	  $("#result").append('Sorry, no public bikes here. How about try "Chicago", "US"?');
-    }
+    }    
 
     $("#company_form").on("submit", function(e) {
-      //var new_url = "https://api.citybik.es/v2/networks/" + $("#company_name");
-      var new_url = "https://api.citybik.es/v2/networks/divvy";
+      var result_company = $("#result_company").text(); //here use .text() not .val()
+      console.log(result_company);
+      console.log(company_name);
+      var new_url = "https://api.citybik.es/v2/networks/" + result_company;
+      console.log(new_url);
       var address_input = $("#address").val();
 
       $.get(new_url, function(newdata) {
       	var station_json = newdata["network"]["stations"];
-        
-      	for(var j = 0; j < 583; j++){
+        //console.log(newdata);
+      	for(var j = 0; j < station_json.length; j++){
       		var address = station_json[j]["name"];
       		if(address == address_input){
-      		  $("#bike_result").append(station_json[j]["empty_slots"]);
+      		  $("#bikeresult").append("empty slots: " + station_json[j]["empty_slots"]);
+            $("#bikeresult").append("free bikes: " + station_json[j]["free_bikes"]);
+            $("#bikeresult").append('<a href=" https://www.google.com/maps/?q= ' + station_json[j]["latitude"] + 
+               ',' + station_json[j]["longitude"] +' ">' + "location" + '</a>');
       		}
       	}
       });      
