@@ -46,13 +46,16 @@ $("#city_form").on("submit", function(e) {
       	var station_json = newdata["network"]["stations"];
         //console.log(newdata);
       	for(var j = 0; j < station_json.length; j++){
-      		var address = station_json[j]["name"];
+      		var address = station_json[j]["extra"]["name"];
       		if(address == address_input){
       		  $("#bikeresult").append('<li>Empty Slots:  ' + station_json[j]["empty_slots"] + '</li>');
             $("#bikeresult").append('<li>Free Bikes:  ' + station_json[j]["free_bikes"] + '</li>');
             $("#bikeresult").append('<li><a href=" https://www.google.com/maps/?q= ' + station_json[j]["latitude"] + 
                ',' + station_json[j]["longitude"] +' ">' + "Location" + '</a></li>');
-      		}
+      		} else {
+            //alert("Please double check the address~") // I wanna to add alert here. But will have thousands alerts. Since in the loop.
+          }
+
       	}
       });      
       e.preventDefault();
