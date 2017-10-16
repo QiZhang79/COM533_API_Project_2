@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -15,9 +15,9 @@
     <div>
       <form id="city_form" method="get" action="/submit.php">
         <label for="city">City</label>
-        <input class="form_styling" type="text" name="city" id="city" />
+        <input class="form_styling_city" type="text" name="city" id="city" />
         <label for="country">Country</label>
-        <input class="form_styling" type="text" name="country" id="country" />
+        <input class="form_styling_city" type="text" name="country" id="country" />
         <input type="submit" name="submit" id="submit" value="Check" />
         <input type="reset" name="reset" id="reset" value="Reset" />
         <p> "Country" input right now only supports country ISO code, like "US", "FR"(France) and "GB"(Great Britain) </p>
@@ -27,7 +27,7 @@
       <div id="company_name"></div>
       <form id="company_form" class="is-hidden" method="get" action="/submit.php">
         <label for="address">Address</label>
-        <input class="form_styling" type="text" name="address" id="address" />
+        <input class="form_styling_company" type="text" name="address" id="address" />
         <input type="submit" name="submit" id="find" value="Find bikes" />
         <p>Try "Damen Ave & 59th St".</p>
       </form>
