@@ -7,7 +7,7 @@
 /* Base */
 body {
   background-color: #f3f1f1;
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
 
 }
@@ -24,7 +24,6 @@ h1 {
   text-align: center;
   padding-top: 13px;
   margin: auto;
-  letter-spacing: 2px;
 }
 
 h4 {
@@ -48,13 +47,13 @@ p {
 }
 
 /*Total Form Styling*/
-.form_styling {
+.form_styling_city {
   height: 25px;
   padding-left: 15px;
   border: none;
   border-radius: 8px;
   margin: 0 10px 0 10px;
-  width: 180px;
+  width: 100px;
 }
 
 #submit, #reset, #find {
@@ -73,7 +72,7 @@ p {
 }
 
 #city_form{
-  width: 670px;
+  width: 530px;
   display: block;
   margin: auto;
   margin-bottom: 20px;
@@ -93,13 +92,23 @@ p {
   display: block;
   margin: auto;
   font-size: 25px;
+  color:#d88e78;
 }
 
 #result_company{
-  color: blue;
+  color: #7EC0EE;
 }
 
 /* Company Form */
+.form_styling_company {
+  height: 25px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 10px 0 10px;
+  width: 180px;
+}
+
 #company_form{
   margin-bottom: 20px;	
 }
@@ -107,5 +116,15 @@ p {
 /* Bike Result */
 li {
   font-size: 25px;
+  color: #d88e78;
 }
 
+a {
+  color: #7EC0EE;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #B0C4DE;
+  text-decoration: underline;
+}
