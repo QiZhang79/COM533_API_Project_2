@@ -21,7 +21,7 @@ $("#city_form").on("submit", function(e) {
 	    var city_li = city_alias(info_json[i]["location"]["city"]);
 
   	  if(country == country_in && city_li.indexOf(city_in) != -1) {
-  		  $("#company_name").append("Yes! Here we have " +'<b id = "result_company">' + info_json[i]["id"] + '</b>');
+  		  $("#company_name").append("Yes! Here we have " +'<b id = "result_company">' + info_json[i]["id"].toUpperCase() + '</b>');
   		  $("#company_form").toggleClass('is-hidden');
   		  output = true;
 
@@ -33,7 +33,7 @@ $("#city_form").on("submit", function(e) {
     }    
 
     $("#company_form").on("submit", function(e) {
-      var result_company = $("#result_company").text(); //here use .text() not .val()
+      var result_company = $("#result_company").text().toLowerCase(); //here use .text() not .val()
       var new_url = "https://api.citybik.es/v2/networks/" + result_company;
       var address_input = $("#address").val();
 
@@ -62,6 +62,12 @@ $("#city_form").on("submit", function(e) {
 
   e.preventDefault();
 
+});
+
+$("#city_form").on("reset", function(e) {
+  $("#country").val("");
+  $("#city").val("");
+  $("#result").html("");
 });
 
 
