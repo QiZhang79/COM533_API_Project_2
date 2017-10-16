@@ -35,7 +35,16 @@ $("#city_form").on("submit", function(e) {
     $("#company_form").on("submit", function(e) {
       var result_company = $("#result_company").text().toLowerCase(); //here use .text() not .val()
       var new_url = "https://api.citybik.es/v2/networks/" + result_company;
-      var address_input = $("#address").val();
+      var address_input = $("#address").val().trim();// removed whitespaces.
+
+      //Use firstUpperCase function to modify the input.
+      function firstUpperCase(address_input) {
+        return address_input.toLowerCase().replace(/\b[a-z]/g,function(s){
+          return s.toUpperCase();
+        });
+      };
+
+      address_input = firstUpperCase(address_input);
 
       $.get(new_url, function(newdata) {
       	var station_json = newdata["network"]["stations"];
