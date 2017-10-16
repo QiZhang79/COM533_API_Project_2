@@ -1,5 +1,3 @@
-$("#company_form").hide();
-
 $("#city_form").on("submit", function(e) {
   var url = "https://api.citybik.es/v2/networks/";
 
@@ -19,44 +17,43 @@ $("#city_form").on("submit", function(e) {
 
     var output = false;//set a boolean at first, otherwise too many output.....
     for(var i = 0; i < info_json.length; i++) {
-	  var country = info_json[i]["location"]["country"];
-	  var city_li = city_alias(info_json[i]["location"]["city"]);
+	    var country = info_json[i]["location"]["country"];
+	    var city_li = city_alias(info_json[i]["location"]["city"]);
 
   	  if(country == country_in && city_li.indexOf(city_in) != -1) {
   		  $("#company_name").append("Yes! Here we have " +'<b id = "result_company">' + info_json[i]["id"] + '</b>');
-  		  $("#company_form").show();
+  		  $("#company_form").toggleClass('is-hidden');
   		  output = true;
 
   	  } 
     }
 
     if(output == false){
-	  $("#result").append('Sorry, no public bikes here. How about try "Chicago", "US"?');
+	    $("#result").append('Sorry, no public bikes here. How about try "Chicago", "US"?');
     }    
 
     $("#company_form").on("submit", function(e) {
       var result_company = $("#result_company").text(); //here use .text() not .val()
-      console.log(result_company);
-      console.log(company_name);
       var new_url = "https://api.citybik.es/v2/networks/" + result_company;
-      console.log(new_url);
       var address_input = $("#address").val();
 
       $.get(new_url, function(newdata) {
       	var station_json = newdata["network"]["stations"];
-        //console.log(newdata);
+        var find = false;
       	for(var j = 0; j < station_json.length; j++){
-      		var address = station_json[j]["extra"]["name"];
+      		var address = station_json[j]["name"];
       		if(address == address_input){
+            find = true;
       		  $("#bikeresult").append('<li>Empty Slots:  ' + station_json[j]["empty_slots"] + '</li>');
             $("#bikeresult").append('<li>Free Bikes:  ' + station_json[j]["free_bikes"] + '</li>');
-            $("#bikeresult").append('<li><a href=" https://www.google.com/maps/?q= ' + station_json[j]["latitude"] + 
+            $("#bikeresult").append('<li><a href=" https://www.google.com/maps/?q=' + station_json[j]["latitude"] + 
                ',' + station_json[j]["longitude"] +' ">' + "Location" + '</a></li>');
-      		} else {
-            //alert("Please double check the address~") // I wanna to add alert here. But will have thousands alerts. Since in the loop.
-          }
-
+      		} 
       	}
+
+        if(find == false){
+          alert("Not found. Could you please try other address?");
+        }
       });      
       e.preventDefault();
     });
