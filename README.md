@@ -10,3 +10,11 @@ authorization.
 
 ## Origin Source
 CityBikes API Documentation http://api.citybik.es/v2/#net_resource
+
+## Application Features
+1. Find whether there is public city bike service in your city;
+2. Find how many slots and bikes in a specific station.
+
+## What I will improve in the future
+1. I haven't find a good way to make the country input matches JSON's country code. So I'll improve this later;
+2. I will add a remind feature for input. When users are typing, the similar result will jump to a list.
