@@ -1,5 +1,3 @@
-
-
 /* RESET CSS */
 * {
   margin: 0;
@@ -26,6 +24,7 @@ h1 {
   text-align: center;
   padding-top: 13px;
   margin: auto;
+  letter-spacing: 2px;
 }
 
 h4 {
@@ -55,7 +54,7 @@ p {
   border: none;
   border-radius: 8px;
   margin: 0 10px 0 10px;
-  width: 130px;
+  width: 180px;
 }
 
 #submit, #reset, #find {
@@ -69,8 +68,12 @@ p {
 }
 
 /* City Form */
+.is-hidden {
+  display: none;
+}
+
 #city_form{
-  width: 568px;
+  width: 670px;
   display: block;
   margin: auto;
   margin-bottom: 20px;
