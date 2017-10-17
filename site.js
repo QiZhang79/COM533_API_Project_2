@@ -21,7 +21,7 @@ $("#city_form").on("submit", function(e) {
 	    var city_li = city_alias(info_json[i]["location"]["city"]);
 
   	  if(country == country_in && city_li.indexOf(city_in) != -1) {
-  		  $("#company_name").append("Yes! Here we have " +'<b id = "result_company">' + info_json[i]["id"].toUpperCase() + '</b>');
+  		  $("#company_name").append("Yes! Here we have " +'<span id = "result_company">' + info_json[i]["id"].toUpperCase() + '</span>');
   		  $("#company_form").toggleClass('is-hidden');
   		  output = true;
 
